@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="Description" content="Enter your description here" />   
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
+    <body>
+        <!-- main outer div -->
+        <div class="outer-container">
+            <!-- top-bar section -->
+            <div class="top-bar">
+                <button>View High Scores</button>
+                <p>Timer: 00:00</p>
+            </div>
+            <!-- inner div -->
+            <div class="inner-container">
+                <!-- main header/quiz intro-->
+                <header class="quiz-intro">
+                    <h1>Coding Quiz Challenge</h1>
+                    <p>Answer all questions before the timer runs out for your chance to set a new high score!</p>
+                    <button id="start-btn">Start</button>
+                </header>
+
+                <!-- main quiz content -->
+                <main>
+                    <section class="question-screen">
+                        <h2>Question Here</h2>
+                        <div id="answer-buttons" class="btn-grid">
+                            <!-- WILL BE GENERATED IN JS -->
+                            <button class="btn">Answer 1</button>
+                            <button class="btn">Answer 2</button>
+                            <button class="btn">Answer 3</button>
+                            <button class="btn">Answer 4</button>
+                        </div>
+                    </section>
+                    <section class="quiz-finish-screen">
+                        <h2>Quiz Finished!</h2>
+                        <p>Your Score: 00</p>
+                        <div>
+                            <label for="">Enter initials:</label>
+                            <input type="text">
+                            <button>Submit</button> 
+                        </div>
+                    </section>
+                    <section class="highscores-screen">
+                        <h2>High Scores:</h2>
+                        <ol>
+                            <!-- WILL BE GENERATED IN JS -->
+                            <li>MK - 25</li>
+                            <li>MK - 25</li>
+                            <li>MK - 25</li>
+                            <li>MK - 25</li>
+                        </ol>
+                        <button>Go Back</button>
+                        <button>Clear High Scores</button>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </body>
+    <script src="/assets/js/questions.js"></script>
+</html>
