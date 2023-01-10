@@ -1,32 +1,26 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const startQuiz = document.getElementsByTagName('header')
 const questionContainerElement = document.getElementById('question-container')
 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
+
 
 function startGame() {
   console.log('Started')
-  startButton.classList.add('hide')
+  startQuiz.classList.add('hide')
 }
 
 function setNextQuestion() {
-
-}
-
-function setNextQuestion() {
+  currentQuestionIndex++
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
+  questionElement.innerText = question.title
+  question.answer.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
     button.classList.add('btn')
@@ -56,13 +50,12 @@ function selectAnswer() {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove()
   }
-  nextbutton.classList.remove('hide')
-} else {
+  /*nextbutton.classList.remove('hide')*/
+ else {
   startButton.innerText = 'Restart'
   startButton.classList.remove('hide')
 }
 }
-
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -74,7 +67,7 @@ function setStatusClass(element, correct) {
 
 
 // list of all questions, choices, and answers
-var questions = [
+var question = [
   {
     title: 'Commonly used data types DO NOT include:',
     choices: ['strings', 'booleans', 'alerts', 'numbers'],
@@ -108,3 +101,5 @@ var questions = [
     answer: 'console.log',
   },
 ];
+
+startButton.addEventListener('click', startGame)

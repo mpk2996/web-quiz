@@ -59,7 +59,7 @@ button {
 /* Header/quiz intro section */
 
 .quiz-intro, main {
-    display: none;
+    display: block;
     margin-bottom: 25vh;
     margin-left: 10%;
     margin-right: 10%;
